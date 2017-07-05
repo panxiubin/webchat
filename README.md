@@ -1,24 +1,22 @@
-# README
+### 实作 webchat
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### 规格
 
-Things you may want to cover:
+##### 功能：
+- 用户可以注册、登入。需要 id（可以自己决定 email 或者 username）和 password
+- 用户登入后，进入联系人列表页面
+- 可以看到自己所有的联系人
+- 每个联系人需要显示对方 id 以及未读私信数量提醒
+- 用户可以通过 id 添加新联系人（可以不需要对方同意）
+- 用户可以删除某个联系人，但保留与对方用户的消息等数据。当再次添加新联系人时，消息等数据都还在
+- 点击一个联系人会进入聊天界面，同时未读信息置为 0
+- 可以看到和某个用户的历史消息
+- 能够在这里收发私信（不需要实时，可以刷一下页面才看到新消息）
+- 当用户 A 发私信给用户 B 时，如果 A 还不是 B 的联系人，应该自动把 A 添加为 B 的联系人，并能够在 B 的联系人列表正常显示（不需要实时）
+- 用户可以删除自己发的消息
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##### 加分项：
+- 联系人列表页面未读消息数实时更新
+- 聊天界面新消息实时收到
+- 自动把 A 添加为 B 联系人时，B 实时更新联系人列表
+- 部署，可在线演示
