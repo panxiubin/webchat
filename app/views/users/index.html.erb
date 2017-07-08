@@ -17,7 +17,7 @@
         <tr>
           <% unless current_user == user %>
             <td><%= user.name %></td>
-            <td><%= user.eamil %></td>
+            <td><%= user.email %></td>
             <td>
               <% if !current_user.friends.include?(user) %>
                 <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
