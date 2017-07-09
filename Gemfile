@@ -38,6 +38,10 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'awesome_rails_console'
 
+gem 'faye'
+gem 'thin', require: false
+gem 'render_sync'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
