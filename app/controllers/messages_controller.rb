@@ -26,7 +26,7 @@ class MessagesController < ApplicationController
       end
     end
 
-    @messages = @conversation.messages.new
+    @message = @conversation.messages.new
   end
 
   def new
@@ -39,7 +39,6 @@ class MessagesController < ApplicationController
     if @message.save
       sync_new @message
     end
-    
     redirect_to :back
   end
 
@@ -52,6 +51,7 @@ class MessagesController < ApplicationController
   end
 
   private
+
   def message_params
     params.require(:message).permit(:body, :user_id)
   end
